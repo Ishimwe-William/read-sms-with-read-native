@@ -5,58 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d4bfd62-19a0-46d9-9ea2-6e57bbaecd3e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/android/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/debug.keystore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/bunsenplus/smslistener/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/bunsenplus/smslistener/MainApplication.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-hdpi/splashscreen_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-mdpi/splashscreen_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xhdpi/splashscreen_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xxhdpi/splashscreen_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-xxxhdpi/splashscreen_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/rn_edit_text_material.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/splashscreen.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values-night/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/DeleteSMSMessage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ListSMSMessages.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Listener.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/SendSMSMessage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +104,7 @@
       <workItem from="1724174582794" duration="46000" />
       <workItem from="1724174653357" duration="123000" />
       <workItem from="1724174781126" duration="149000" />
-      <workItem from="1724174969612" duration="3727000" />
+      <workItem from="1724174969612" duration="11720000" />
     </task>
     <servers />
   </component>

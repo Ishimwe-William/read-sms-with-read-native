@@ -1,10 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, FlatList, StyleSheet } from 'react-native';
+import React, {useEffect, useState, useCallback} from 'react';
+import {View, Text, FlatList, TouchableOpacity, StyleSheet, Button, PermissionsAndroid} from 'react-native';
 import SmsAndroid from 'react-native-get-sms-android';
-import { PermissionsAndroid } from 'react-native';
+
+const MessageItem = React.memo(({address, body}) => (
+    <View style={styles.messageContainer} >
+        <Text style={styles.address} selectable={true}>{address}</Text>
+        <Text style={styles.body} selectable={true}>{body}</Text>
+    </View>
+));
 
 export default function App() {
     const [messages, setMessages] = useState([]);
+    const [refreshing, setRefreshing] = useState(false);
 
     useEffect(() => {
         requestSMSPermission();
@@ -33,17 +40,9 @@ export default function App() {
         }
     };
 
-    const listSMS = () => {
+    const listSMS = useCallback(() => {
         let filter = {
-            box: 'inbox', // 'inbox' (default), 'sent', 'draft', 'outbox', 'failed', 'queued', and '' for all
-            // the next 4 filters should NOT be used together, they are OR-ed so pick one
-            read: 0, // 0 for unread SMS, 1 for SMS already read
-            _id: 1234, // specify the msg id
-            address: '+1888------', // sender's phone number
-            body: 'How are you', // content to match
-            // the next 2 filters can be used for pagination
-            indexFrom: 0, // start from index 0
-            maxCount: 10, // count of SMS to return each time
+            box: 'inbox', // Retrieve all inbox messages
         };
 
         SmsAndroid.list(
@@ -53,25 +52,49 @@ export default function App() {
             },
             (count, smsList) => {
                 console.log('Count: ', count);
-                console.log('List: ', smsList);
-                var arr = JSON.parse(smsList);
-                setMessages(arr);
+                let allMessages = JSON.parse(smsList);
+
+                // Filter messages where address or body contains 'M-Money'
+                let filteredMessages = allMessages.filter(message =>
+                    message.address.includes('Money') ||
+                    message.body.includes('Money')
+                );
+
+                setMessages(filteredMessages);
+                setRefreshing(false); // Stop refreshing
             },
         );
+    }, []);
+
+    const handleRefresh = () => {
+        setRefreshing(true);
+        listSMS(); // Refresh the list
     };
 
     return (
         <View style={styles.container}>
             <Text style={styles.title}>SMS Inbox</Text>
+            <TouchableOpacity onPress={handleRefresh}
+                              style={{
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                  padding: 10,
+                                  borderRadius: 5,
+                                  borderWidth: 2,
+                                  backgroundColor:'transparent',
+                                  borderColor: '#459682'
+                              }}>
+                <Text>Refresh</Text>
+            </TouchableOpacity>
             <FlatList
                 data={messages}
+                extraData={messages} // Ensure FlatList updates with new data
                 keyExtractor={(item) => item._id}
-                renderItem={({ item }) => (
-                    <View style={styles.messageContainer}>
-                        <Text style={styles.address}>{item.address}</Text>
-                        <Text style={styles.body}>{item.body}</Text>
-                    </View>
+                renderItem={({item}) => (
+                    <MessageItem address={item.address} body={item.body}/>
                 )}
+                refreshing={refreshing}
+                onRefresh={handleRefresh}
             />
         </View>
     );
